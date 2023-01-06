@@ -8,6 +8,7 @@
     <title>カフェのサイト</title>
     <meta name="description" content="カフェのサイトです。">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,17 +19,31 @@
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">EVENT</a></li>
-                    <li><a href="#">ACCESS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
-
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
             </nav>
         </div>
         <div class="slider">
-            <p><img src="images/pc_first-100.jpg" alt="カフェの様子"></p>
+            <p>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                </picture>
+            </p>
         </div>
     </header>
     <main>
@@ -39,18 +54,26 @@
                 <p class="japanese">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
                 </p>
             </div>
-            <div class="about_us">
+            <div class="about_us" id="about">
                 <div class="about_photo">
-                    <img src="images/pc_about-100.jpg" alt="ラテアートがふたつとアイスコーヒー">
+                    <picture>
+                        <source srcset="images/about_us@2x.png" media="(max-width:767px)">
+                        <img src="images/pc_about-100.jpg" alt="ラテアートがふたつとアイスコーヒー">
+                    </picture>
                 </div>
                 <section class="about">
-                    <h3><img src="images/about_us@2x.png" alt="ABOUT US"></h3>
+                    <h3>
+                        <picture>
+                            <source srcset="images/about_us@2x-100.jpg" media="(max-width:767px)">
+                            <img src="images/about_us@2x.png" alt="ABOUT US">
+                        </picture>
+                    </h3>
                     <h4>私たちが提供する<br>こだわりのコーヒー</h4>
                     <p>サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     </p>
                 </section>
             </div>
-            <div class="menu_wrap">
+            <div class="menu_wrap" id="menu">
                 <h3 class="menu_logo">
                     <img src="images/menu@2x.png" alt="メニュー">
                 </h3>
@@ -75,11 +98,15 @@
                 </div>
             </div>
         </div>
-        <div class="gallery">
+        <div class="gallery" id="gallery">
             <h3 class="gallery_logo">
                 <img src="images/gallery@2x.png" alt="GALLERY">
             </h3>
-            <div class="gallery_photo">
+            <div class="sp_gallery_photo">
+                <img src="images/mobile_gallery-100.jpg" alt="店内の様子">
+
+            </div>
+            <div class="pc_gallery_photo">
                 <img src="images/pc_gallary_05-100.jpg" alt="店内の様子"><img src="images/pc_gallary_04-100.jpg"
                     alt="コーヒー豆"><img src="images/pc_gallary_03-100.jpg" alt="店内コーヒーを入れる場所"><img
                     src="images/pc_gallary_02-100.jpg" alt="店内メニュー表"><img src="images/pc_gallary_01-100.jpg"
@@ -87,19 +114,25 @@
             </div>
         </div>
         <article>
-            <h3 class="event_logo">
+            <h3 class="event_logo" id="event">
                 <img src="images/event@2x.png" alt="EVENT">
             </h3>
             <div class="event">
-                <ul class="news">
+                <ul class="pc_news">
                     <li>2020.06.23<span style="margin-right: 2em;"></span><a href="#">7月はイベント出店のため0/0お休みします</a></li>
                     <li>2020.03.15<span style="margin-right: 2em;"></span><a href="#">春の新商品新発売。話題のあのブランドとコラボ</a></li>
                     <li>2020.02.06<span style="margin-right: 2em;"></span><a href="#">コーヒーの日で30％OFFイベントを開催［3日間限定］</a>
                     </li>
                 </ul>
+                <ul class="sp_news">
+                    <li>2020.06.23<br><a href="#">7月はイベント出店のため0/0・・・</a></li>
+                    <li>2020.03.15<br><a href="#">春の新商品新発売。話題のあのブランド・・・</a></li>
+                    <li>2020.02.06<br><a href="#">コーヒーの日で30％OFFイベントを・・・</a>
+                    </li>
+                </ul>
             </div>
         </article>
-        <div class="access">
+        <div class="access" id="access">
             <h3 class="access_logo">
                 <img src="images/access@2x.png" alt="ACCESS">
             </h3>
@@ -132,7 +165,14 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open')
+            });
+        });
+    </script>
 </body>
 
 </html>
