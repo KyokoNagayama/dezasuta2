@@ -49,6 +49,9 @@ body{
 }
 
 /* ヘッダー */
+html{
+    scroll-behavior: smooth;
+}
 
 
 
@@ -110,7 +113,12 @@ body{
     font-size: 23px;
     line-height: 1.65;
 }
-
+.br-sp{
+    display: none;
+}
+.sp_about{
+    display: none;
+}
 .about_us{
     display: flex;
     align-items: center;
@@ -137,7 +145,6 @@ body{
 
 .about img{
     width: 272px;
-    height: 77px;
 }
 .about h4{
     font-size: 44px;
@@ -149,7 +156,6 @@ body{
 
 .menu_logo{
     width: 151px;
-    height: 78px;
     margin: 100px auto 48px;
 }
 
@@ -196,7 +202,6 @@ body{
     }
 .gallery_logo img{
     width: 245px;
-    height: 78px;
 }
 
 .sp_gallery_photo{
@@ -215,7 +220,6 @@ body{
 }
 .event_logo img{
     width: 174px;
-    height: 78px;
 }
 .event{
     max-width: 1000px;
@@ -239,9 +243,13 @@ body{
 .sp_news{
     display: none;
 }
+.margin-right{
+    margin-right: 2em;
+}
+
+
 .access_logo{
     width: 213px;
-    height: 78px;
     margin: 70px auto 40px;
 }
 .access_map iframe{
@@ -269,7 +277,6 @@ footer{
 
 .footer_logo img{
     width: 226px;
-    height: 50px;
 }
 .footer_logo{
     display: flex;
@@ -389,27 +396,27 @@ footer{
 
 }
 @media screen and (max-width:767px) {
-    .main_wrap{
-        width: 100%;
-        margin: 0 auto;
-    }
+    
     .main_top{
         margin: 43px auto 0;
         text-align: center;
     }
     .english{
-        font-size: 17px;
+        font-size: 4.53vw;
     }
     .main_top h2{
-        font-size: 37px;
+        font-size: 9.86vw;
         font-weight: 400;
         padding: 27px 0 27px;
         line-height: 1.16;
     
     }
     .japanese{
-        font-size: 16px;
+        font-size: 4.26vw;
         line-height: 1.88;
+    }
+    .br-sp{
+        display: block;
     }
     
     .about_us{
@@ -417,12 +424,20 @@ footer{
         width: 100%;
         margin: 0 ;
     }
-    .about_photo{
+    .pc_about{
+        display: none;
+    }
+    .sp_about{
+        display: block;
         width: 160px;
-        height: 45px;
         margin: 66px auto 18px;
     }
+    .about_photo{
+        width: 100%;
+    }
+
     .about_photo img{
+        width: 100%;
         border-bottom-right-radius:  0px; 
     }
     .about{
@@ -452,17 +467,14 @@ footer{
     
     .menu_logo{
         width: 88px;
-        height: 45px;
         margin: 57px auto 22px;
     }
     
     .menu_wrap{
-        margin: 106px auto 100px;
+        margin: 106px 0 100px;
         height: auto;
     }
-    @media (max-width: 1000px) {
-        .menu_wrap{margin: 0 10px;
-    }}
+
     .menu{
         display: block;
         width: 100%;
@@ -470,7 +482,7 @@ footer{
     }
     
     .menu_section {
-        width: 80%;
+        width: 80vw;
         margin: 0 auto 60px;
     }
     .menu_section img{
@@ -501,7 +513,6 @@ footer{
         }
     .gallery_logo img{
         width: 142px;
-        height: 45px;
     }
     
     .pc_gallery_photo{
@@ -517,7 +528,7 @@ footer{
     }
     
     
-    article{
+    .event_wrap{
         margin: 0 10px;
     }
     .event_logo{
@@ -526,7 +537,6 @@ footer{
     }
     .event_logo img{
         width: 100px;
-        height: 45px;
     }
     .event{
         width: 100%;
@@ -543,23 +553,25 @@ footer{
         display: block;
         margin: 0 auto;
     }
-    .sp_news ul{
-        margin: 24px 30px 4px;
-    }
     .sp_news li{
         font-size: 16px;
         line-height: 1;
-        padding: 24px 30px 28px;
-
+        padding: 24px 30px 0;
+    }
+    .sp_news li:last-child{
+        padding-bottom: 20px;
     }
     .sp_news a{
         text-decoration-line: underline;
     }
     
+    
     .access_logo{
         width: 124px;
-        height: 45px;
         margin: 31px auto 10px;
+    }
+    .access_map{
+        width: 100%;
     }
     .access_map iframe{
         width: 100%;
@@ -567,8 +579,8 @@ footer{
         vertical-align: bottom;
     }
     .pagetop{
-        width: 125px;
-        height: 125px;
+        width: 100px;
+        height: 100px;
         position: fixed;
         bottom: 16px;
         right: 16px;
@@ -587,13 +599,11 @@ footer{
     
     .footer_logo img{
         width: 226px;
-        height: 50px;
     }
     .footer_logo{
         display: block;
-        width: 100%;
-        margin: 0 auto;
         padding: 46px 20px;
+        box-sizing: border-box;
     }
     .footer_logo img{
         margin-bottom: 36px;
