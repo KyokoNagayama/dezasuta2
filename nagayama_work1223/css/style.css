@@ -18,8 +18,7 @@ dd {
     margin: 0;
     padding: 0;
     color: #4f260b;
-    font-family:"游ゴシック体", YuGothic, "游ゴシック Medium","Yu Gothic Medium","游ゴシック","Yu Gothic", sans-serif;
-    font-feature-settings: "palt";
+    font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG 明朝E", "MS P明朝", "MS 明朝", serif;
 }
 
 a {
