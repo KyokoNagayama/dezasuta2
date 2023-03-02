@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.ripples-min.js"></script>
+
+</head>
+
+<body>
+    <div id="cursor"></div><!---カーソル*/ -->
+    <header class="design_header">
+        <div class="square_border"></div><!-- 枠-->
+        <div class="square">
+            <h1>Contact</h1>
+            <p class="contact_p">
+                温かいお言葉やお仕事のお話など<br class="sp">ご連絡お待ちしております。<br><br>zoom等のオンライン通話の<br
+                    class="sp">ご対応も可能です。<br><br>ご縁を大切に真摯に<br>対応いたします。</p>
+        </div><!---固定メニュー画面 -->
+        <div>
+            <div class="circle">
+                <div class="inner"> <!-- 文字配置の基準となる親要素 -->
+                    <p class="text">Aim for higher goals!! </p>
+                </div>
+            </div>
+            <div class="parent2">
+                <div class="test1"><a href="index.html">Home</a></div>
+                <div class="test2"><a href="webdesign.html">Webdesign</a></div>
+                <div class="test3"><a href="website.html">Website</a></div>
+                <div class="test4"><a href="contact.html">Contact</a></div>
+                <div class="mask2">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav class="sp_home">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sp_container">
+            <h1>Contact</h1>
+            <p class="sp_contact_p">
+                温かいお言葉やお仕事のお話など<br class="sp">ご連絡お待ちしております。<br class="sp2"><br class="sp2">zoom等のオンライン通話の<br
+                    class="sp sp2">ご対応も可能です。<br class="sp2"><br>ご縁を大切に真摯に<br class="sp2">対応いたします。</p>
+        </div>
+        <div class="container">
+            <div class="contact_wrap">
+                <h2 id="attribute">You would like to...
+                </h2>
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdRLtWgOxLpHl8XS8wpu7WtK7360NlhKqi8qtHwFxKoNrXt1w/formResponse"
+                    method="POST" id="form">
+                    <section class="contact">
+                        <div class="pc_inputField">
+                            <ul class="radioList">
+                                <li>
+                                    <label>
+                                        <input type="radio" name="entry.972899747" value="お問い合わせ">
+                                        <span>お問い合せ</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="entry.972899747" value="お見積り">
+                                        <span>お見積り</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="entry.972899747" value="ご相談・その他">
+                                        <span>ご相談・その他</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sp_input">
+                            <select id="" name="entry.1190032059">
+                                <option>--お選びください--</option>
+                                <option>お問い合わせ</option>
+                                <option>お見積り</option>
+                                <option>ご相談・その他</option>
+                            </select>
+                        </div>
+                        <div class="contact_flex">
+                            <section>
+                                <p class="contact_name">
+                                    <label for="person">Your Name<br><input type="text" name="entry.1137275639"
+                                            placeholder="お名前"></label>
+                                </p>
+                                <p class="contact_mail">
+                                    <label for="mail">Your email adress<br><input type="email" name="entry.1765561918"
+                                            placeholder="メールアドレス"></label>
+                                </p>
+                            </section>
+                            <p class="contact_comment"><label for="comment">Your message<br><textarea
+                                        name="entry.882642916" rows="5" placeholder="お問合せ内容"></textarea></label>
+                            </p>
+                            <p class="submit"><input type="submit"></p>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script> // 水面
+        $('body').ripples({
+            resolution: 3000,
+            dropRadius: 20,
+            perturbance: 0.04,
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

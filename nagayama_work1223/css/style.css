@@ -64,6 +64,7 @@ html{
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .logo{
@@ -90,6 +91,23 @@ html{
 .slider img{
     width: 100%;
 }
+
+/* スライダー調整 */
+.slick-dots{
+    bottom: 25px;
+    color: #fff;
+}
+.slick-dots li.slick-active button:before{
+    color:#fff
+}
+.slick-dots li button:before{
+    color: #fff;
+}
+
+.slick-dotted.slick-slider{
+    margin-bottom: 0;
+}
+
 .main_wrap{
     max-width: 1000px;
     margin: 0 auto;

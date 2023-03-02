@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>カフェのサイト</title>
     <meta name="description" content="カフェのサイトです。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -26,6 +31,7 @@
                     <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
+
             <div class="sp_btn"><span></span></div>
             <nav class="sp_nav">
                 <ul>
@@ -42,6 +48,12 @@
                 <picture>
                     <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
                     <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                </picture>
+            </p>
+            <p>
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/slider_2.jpg" alt="カフェの様子">
                 </picture>
             </p>
         </div>
@@ -168,9 +180,18 @@
     </footer>
     <script>
         $(function () {
-            $('.sp_btn').on('click', function () {
+            // ハンバーガーメニュー
+            $('.sp_btn,.sp_nav li a').on('click', function () {
                 $('.sp_nav').fadeToggle();
-                $('.sp_btn').toggleClass('open')
+                $('.sp_btn').toggleClass('open');
+            });
+
+            // スライダー
+            $('.slider').slick({
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplayspeed: 2000,
             });
         });
     </script>

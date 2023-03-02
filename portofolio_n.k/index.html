@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>試作品</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/stylsheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.ripples-min.js"></script>
+</head>
+
+<body>
+    <div id="cursor"></div><!---カーソル*/ -->
+    <header>
+        <div class="square">
+            <div class="keyvisual">
+                <div class="keyvisual__scroll">
+                    <img src="images/zayuu@2x-8.png" alt="" class="keyvisual__scroll--circle">
+                </div>
+            </div>
+            <nav class="pc_menu">
+                <ul class="wrap_menu">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="banner.html">BANNER</a></li>
+                    <li><a href="webdesign.html">WEB DESIGN</a></li>
+                    <li><a href="website.html">WEB SITE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div><!---固定メニュー画面 -->
+        <div class="circle">
+            <div class="inner"> <!-- 文字配置の基準となる親要素 -->
+                <p class="text">Aim for higher goals!! </p>
+            </div>
+        </div>
+        <div class="parent2">
+            <div class="test1"><a href="index.html">Home</a></div>
+            <div class="test2"><a href="webdesign.html">Webdesign</a></div>
+            <div class="test3"><a href="website.html">Website</a></div>
+            <div class="test4"><a href="contact.html">Contact</a></div>
+            <div class="mask2">
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main_wrap">
+            <!-- ファーストビュー -->
+            <div class="aim">
+                <h1>目指すのは、今以上</h1>
+                <p class="aim_p"><a>Aiming for more than now</a></p>
+            </div>
+
+            <!-- 挨拶 -->
+            <section class="hello">
+                <p>こんにちは</p>
+                <p>Webデザイナーの長山響子です。</p>
+                <p>人と人との繋がりや</p>
+                <p>ご縁を大切にして</p>
+                <p>最高のエクスペリエンスを</p>
+                <p>構築するために、</p>
+                <p>課題に真摯に向き合い努力します。</p>
+        </div>
+        </p>
+        </section>
+
+        <!-- 自己紹介 -->
+        <div class="about_wrap" id="about">
+            <div class="about">
+                <section class="about_title">
+                    <h2 class="title">ABOUT</h2>
+                    <p class="title_p">私について</p>
+                </section>
+                <section class="about_p">
+                    <p>東京都出身、神奈川県育ち<br>人と関わることが好きで人の役に、ひいては社会の役に立ちたいと思っています。</p>
+                    <p>2022年7月から2023年1月まで職業訓練校WEBクリエイター科に通い、HTML・CSS、Excel、Webマーケティング、SEO、Photoshop、WordPressを学び、同時にIllustlatorやjQuery・JavaScriptも独学で学びました。
+                    </p>
+                </section>
+            </div>
+            <div class="wrap_vision">
+                <section class="vision">
+                    <div class="vision_title">
+                        <h3 class="title">VISION</h3>
+                    </div>
+                    <p class="vision_p">webデザイナーとしての経験を詰みながら
+                        Javaなどのプログラミング言語も習得し
+                        のちにはプログラマーになるのが目標です。
+                        持ち前の好奇心と行動力で常に挑戦し続けます。
+                    </p>
+                </section>
+                <!-- <div class="vision_photo"> -->
+                <div class="vision_img1">
+                    <div href="#" class="rv-card" ontouchstart="">
+                        <div class="front-card"> <!--前面-->
+                            <div class="front-inner">
+                                <img src="images/left@2x-8.png" width="100%">
+                            </div>
+                        </div>
+                        <div class="back-card"> <!--背面-->
+                            <div class="back-inner">
+                                <img src="images/left_back@2x-8.png" width="100%" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <section class="vision_img2">
+                    <div href="#" class="rv-card2" ontouchstart="">
+                        <div class="front-card2"> <!--前面-->
+                            <div class="front-inner">
+                                <img src="images/centar@2x-8.png" width="100%">
+                            </div>
+                        </div>
+                        <div class="back-card2"> <!--背面-->
+                            <div class="back-inner">
+                                <img src="images/center_back@2x-8.png" width="100%" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="vision_img3">
+                    <div href="#" class="rv-card3" ontouchstart="">
+                        <div class="front-card3"> <!--前面-->
+                            <div class="front-inner">
+                                <img src="images/right@2x-8.png" width="100%">
+                            </div>
+                        </div>
+                        <div class="back-card3"> <!--背面-->
+                            <div class="back-inner">
+                                <img src="images/right_back@2x-8.png" width="100%" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- works -->
+        <div class="title_wrap" id="works">
+            <div class="works_title">
+                <h2 class="title">WORKS</h2>
+                <p class="title_p">製作物</p>
+            </div>
+        </div>
+        <!-- BANNER -->
+        <div class="works_container">
+            <div class="works_wrap">
+                <ul class="works_images">
+                    <li class="mask">
+                        <img src="images/banner_clip@2x-8.png" width="100%" alt="">
+                    </li>
+                    <li class="under"></li>
+                    <li id="hide" style="display: none;">
+                        <img src="images/top_banner1@2x-20.jpg" width="100%" alt="">
+                    </li>
+                    <li id="hide2" style="display: none;">
+                        <img src="images/top_banner2@2x-20.jpg" width="100%" alt="">
+                    </li>
+                    <li id="hide3" style="display: none;">
+                        <img src="images/top_banner3@2x-20.jpg" width="100%" alt="">
+                    </li>
+                </ul>
+                <div class="works_p">
+                    <p class="TravelMedia">TravelMedia</p>
+                    <p class="popver">DeluxBurger POPver.</p>
+                    <p class="koukyu">DeluxBurger 高級ver.</p>
+                </div>
+            </div>
+            <div>
+                <section>
+                    <ul class="sp_works_images sp_works_banner">
+                        <li class="sp_mask">
+                            <img src="images/banner_clip@2x-8.png" width="100%" alt="">
+                        </li>
+                        <li class="sp_under"></li>
+                        <li id="sp_hide">
+                            <img src="images/top_banner1@2x-20.jpg" width="100%" alt="">
+                        </li>
+                        <li id="sp_hide2">
+                            <img src="images/top_banner2@2x-20.jpg" width="100%" alt="">
+                        </li>
+                        <li id="sp_hide3">
+                            <img src="images/top_banner3@2x-20.jpg" width="100%" alt="">
+                        </li>
+                    </ul>
+                </section>
+                <section class="sp_banner_viewmore">
+                    <div class="viewmore">
+                        <p class="button006"><a href="banner.html">view more</a></p>
+                        <div class="spring-spinner">
+                            <div class="spring-spinner-part top">
+                                <div class="spring-spinner-rotator"></div>
+                            </div>
+                            <div class="spring-spinner-part bottom">
+                                <div class="spring-spinner-rotator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- BANNER END -->
+
+            <!-- WEBDESIGN -->
+            <div class="works_wrap">
+                <div class="works_p">
+                    <p class="LIFE">LIFE hair design</p>
+                    <p class="WORKERS">会員制コワーキングスペース<br>WORKERS</p>
+                </div>
+                <ul class="works_images">
+                    <li class="mask">
+                        <img src="images/webdesign_mask@2x-8.png" width="100%" alt="">
+                    </li>
+                    <li class="under"></li>
+                    <li id="hide4" style="display: none;">
+                        <img src="images/web_design1@2x-20.jpg" width="100%" alt="">
+                    </li>
+                    <li id="hide5" style="display: none;">
+                        <img src="images/web_design2@2x-20.jpg" width="100%" alt="">
+                    </li>
+                </ul>
+
+            </div>
+            <section>
+                <ul class="sp_works_images sp_works_webdesign">
+                    <li class="sp_mask">
+                        <img src="images/webdesign_mask@2x-8.png" width="100%" alt="">
+                    </li>
+                    <li class="sp_under"></li>
+                    <li id="sp_hide4">
+                        <img src="images/web_design1@2x-20.jpg" width="100%" alt="">
+                    </li>
+                    <li id="sp_hide5">
+                        <img src="images/web_design2@2x-20.jpg" width="100%" alt="">
+                    </li>
+                </ul>
+            </section>
+            <section class="pc_design_viewmore">
+                <div class="desin_viewmore">
+                    <p class="button006"><a href="webdesign.html">view more</a></p>
+                    <div class="spring-spinner">
+                        <div class="spring-spinner-part top">
+                            <div class="spring-spinner-rotator"></div>
+                        </div>
+                        <div class="spring-spinner-part bottom">
+                            <div class="spring-spinner-rotator"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sp_design_viewmore">
+                <div class="viewmore">
+                    <p class="button006"><a href="webdesign.html">view more</a></p>
+                    <div class="spring-spinner">
+                        <div class="spring-spinner-part top">
+                            <div class="spring-spinner-rotator"></div>
+                        </div>
+                        <div class="spring-spinner-part bottom">
+                            <div class="spring-spinner-rotator"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- WEBDESIGN END -->
+
+            <!-- WEBSITE -->
+            <div class="works_wrap">
+
+                <ul class="works_images">
+                    <li class="mask">
+                        <img src="images/website_clip@2x-8.png" width="100%" alt="">
+                    </li>
+                    <li class="under"></li>
+                    <li id="hide6" style="display: none;">
+                        <img src="images/web_site1@2x-20.jpg" width="100%" alt="">
+                    </li>
+                    <li id="hide7" style="display: none;">
+                        <img src="images/web_site2@2x-20.jpg" width="100%" alt="">
+                    </li>
+                    <li id="hide8" style="display: none;">
+                        <img src="images/web_site3@2x-20.jpg" width="100%" alt="">
+                    </li>
+                </ul>
+                <div class="works_p">
+                    <p class="cafe">DESIGN CAFE</p>
+                    <p class="realestate">VirtualRealEstateAgent</p>
+                    <p class="ph">PORTFOLIO</p>
+                </div>
+            </div>
+            <div>
+                <ul class="sp_works_images sp_works_website">
+                    <li class="sp_mask">
+                        <img src="images/website_clip@2x-8.png" width="100%" alt="">
+                    </li>
+                    <li class="sp_under"></li>
+                    <li id="sp_hide6">
+                        <img src="images/web_site1@2x-20.jpg" width="100%" alt="">
+                    </li>
+                    <li id="sp_hide7">
+                        <img src="images/web_site2@2x-20.jpg" width="100%" alt="">
+                    </li>
+                    <li id="sp_hide8">
+                        <img src="images/web_site3@2x-20.jpg" width="100%" alt="">
+                    </li>
+                </ul>
+                <section class="sp_site_viewmore">
+                    <div class="viewmore">
+                        <p class="button006"><a href="website.html">view more</a></p>
+                        <div class="spring-spinner">
+                            <div class="spring-spinner-part top">
+                                <div class="spring-spinner-rotator"></div>
+                            </div>
+                            <div class="spring-spinner-part bottom">
+                                <div class="spring-spinner-rotator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <small>&copy 2023 K.NAGAYAMA</small>
+    </footer>
+    <script>
+        // 水面
+        $('body').ripples({
+            resolution: 3000,
+            dropRadius: 20,
+            perturbance: 0.04,
+        });
+
+        //<p>要素をクリックしたら発動
+        $('.TravelMedia').hover(function () {
+
+            //隠れているテキストがゆっくり表示される
+            $('#hide').show('slow')
+        }, function () {
+            $('#hide').hide('slow')
+        });
+
+        //<p>要素をクリックしたら発動
+        $('.popver').hover(function () {
+
+            //隠れているテキストがゆっくり表示される
+            $('#hide2').show('slow')
+        }, function () {
+            $('#hide2').hide('slow')
+        });
+
+        //<p>要素をクリックしたら発動
+        $('.koukyu').hover(function () {
+
+            //隠れているテキストがゆっくり表示される
+            $('#hide3').show('slow')
+        }, function () {
+            $('#hide3').hide('slow')
+        });
+
+        //<p>要素をクリックしたら発動
+        $('.LIFE').hover(function () {
+
+            //隠れているテキストがゆっくり表示される
+            $('#hide4').show('slow')
+        }, function () {
+            $('#hide4').hide('slow')
+        });
+
+        //<p>要素をクリックしたら発動
+        $('.WORKERS').hover(function () {
+
+            //隠れているテキストがゆっくり表示される
+            $('#hide5').show('slow')
+        }, function () {
+            $('#hide5').hide('slow')
+        });
+
+        //<p>要素をクリックしたら発動
+        $('.cafe').hover(function () {
+
+            //隠れているテキストがゆっくり表示される
+            $('#hide6').show('slow')
+        }, function () {
+            $('#hide6').hide('slow')
+        });
+
+        //<p>要素をクリックしたら発動
+        $('.realestate').hover(function () {
+
+            //隠れているテキストがゆっくり表示される
+            $('#hide7').show('slow')
+        }, function () {
+            $('#hide7').hide('slow')
+        });
+
+        //<p>要素をクリックしたら発動
+        $('.ph').hover(function () {
+
+            //隠れているテキストがゆっくり表示される
+            $('#hide8').show('slow')
+        }, function () {
+            $('#hide8').hide('slow')
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,574 @@
+html{
+  scroll-behavior: smooth;
+}
+/* カーソルの丸 */
+#cursor{
+  position: fixed;
+  /*丸の大きさと色の指定*/
+  background: rgba(158, 158, 189, 0.7);
+  border-radius:20px;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;/*真ん中にくるようにマイナスマージンで調整*/
+  z-index: 2;/*一番手前に来るように*/
+  pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+}
+#cursor.active{
+  transform: scale(2.0);
+  background: rgba(158, 158, 189, 0.7);
+}
+#cursor.active{
+  transform: scale(2.0);
+  background: rgba(158, 158, 189, 0.7);
+}
+@keyframes bggradient{
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+/*カーソル*/
+
+/*グラデーション*/
+body {
+  position: relative;
+  background:linear-gradient(45deg,#d2d2e7, #bfcacf,#ecdcd9);/*グラデーションを定義*/
+  background-size: 200% 300%;/*サイズを大きくひきのばす*/
+  animation: bggradient 5s ease infinite;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/*グラデーション */
+
+/* 外枠 */
+.square{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100vh;
+  background: #fae6da; /* Old browsers */
+  background: -moz-linear-gradient(top left, #fae6da 0%, #f2f2f0 20%, #f4f1ec 40%, #f5efe5 60%, #efe2da 80%, #e1dfde 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top left, #fae6da 0%,#f2f2f0 20%,#f4f1ec 40%,#f5efe5 60%,#efe2da 80%,#e1dfde 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom right, #fae6da 0%,#f2f2f0 20%,#f4f1ec 40%,#f5efe5 60%,#efe2da 80%,#e1dfde 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  transform:rotate(15deg);
+  margin-left: -25%;
+}
+.square_border{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  border: #fff solid 10px;
+  border-image: linear-gradient(to bottom left, #fae6da 0%,#f2f2f0 20%,#f4f1ec 40%,#f5efe5 60%,#efe2da 80%,#e1dfde 100%);
+  border-image-slice: 1;
+  box-sizing: border-box;
+}
+/* 外枠 */
+.contact_p{
+  transform: rotate(-15deg);
+  margin: 70px 0 0 55%;
+  font-size: 1.024vw;
+  text-align: center;
+  line-height: 1;
+}
+.square h1{
+  transform: rotate(-15deg);
+  margin: 70px 0 0 55%;
+  font-size: 3.51vw;
+}
+.sp_container{
+display: none;
+}
+/* メニューくるくる */
+.circle {
+  bottom:20px;
+  left:80px;
+  position:fixed;
+  width: 20%;
+  height: 20%;
+  border-radius: 30%;
+  color: #bdbdd3;
+  z-index: 1;
+}
+.inner {  /* 文字を配置する起点となる親要素 */
+  position: relative;
+  top:50%;
+  width: 20px;  /* この親要素自体は1文字が収まる程度の小さいサイズ */
+  height: 20px;
+  border-radius: 50%;
+  animation: rotateAnim 50s linear infinite;  /* 円形テキストを回転 */
+}
+/* .inner:hover {
+  animation-play-state: paused;  アニメーション一時停止
+} */
+@keyframes rotateAnim {
+  0% { transform: rotate(0deg); }
+  50%{ transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }  /* ここを0degにしてしまうと、180度の地点で逆方向の回転になるので注意 */
+}  
+.text span {
+  position: absolute;
+  inset: 0;  /* topとleftとbottomとrightをまとめて指定 */
+  font-weight: 400;
+}
+/* 目標回る */
+
+main{
+    width: 80%;
+    margin: 0 20px 0 auto;
+}
+*{
+  color: #99908c;
+}
+.sp_home{
+  display: none;
+}
+.sp_input{
+  display: none;
+}
+.container{
+padding:15vw 5vw;
+    
+}
+.contact_wrap{
+  position: relative;
+  width: 68vw;
+  /* height: 55vh; */
+  background: #fff;
+  padding: 5% 2%;
+  align-items: center;
+  color: #99908c;
+  border: 0.5px solid #ccc1bc;
+  box-shadow:1px 1px 3px rgba(0,0,0,0.1);
+}
+.contact_wrap::after{
+  content:"";
+  display:block;
+  width:100%;height:100%;
+  border:1px solid #ddd;
+  background:#fff;
+  border-radius:2px;
+  box-shadow:1px 1px 3px rgba(0,0,0,0.1);
+  position:absolute;
+  left: 7px;;
+  top: 7px;;
+	z-index:-1;
+}
+.contact_wrap h2{
+  margin: 5%;
+  font-size: 24px;
+}
+.contact {
+  width: 100%;
+  }
+.contact td {    
+  vertical-align: middle;
+}
+
+/*----------------------------------------
+    Form Parts
+----------------------------------------*/
+/*各フォーム部品の基本スタイルを上書きします*/
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  -webkit-appearance: none;
+  appearance: none; /*ブラウザ標準スタイルを無効にする*/
+  width: 100%;
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  font-family: inherit;
+}
+  
+/*フォーカス時*/
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus{
+  outline: none;
+  box-shadow: 0 0 5px #99908cb3;
+}
+/*エラー時*/
+.is-error input[type="text"],
+.is-error textarea{
+  color: #99908c;
+  border-color: #99908c;
+}
+
+/*----------------------------------
+    radio
+------------------------------------*/
+input[type="radio"] {
+  opacity: 0; /*透明にして見えなくする*/
+  position: absolute; /*本来の配置から切り離す*/
+}
+/*クリック範囲*/
+input[type="radio"]+span {
+  display: inline-block;
+  position: relative;
+  margin: 0 2em 0 0;
+  padding: 0.3em 0.3em 0.3em 2em;
+  line-height: 1;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/*フォーカス時*/
+input[type="radio"]:focus+span {
+  outline: none;
+  box-shadow: 0 0 5px rgba(153, 144, 140, 0.702);
+}
+
+/*ラジオボタンスタイル*/
+input[type="radio"]+span:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1.375em;
+  height: 1.375em;
+    border: 1px solid #99908c;
+  border-radius: 50%;
+  line-height: 1;
+  background: #fff;
+}
+/*ラジオボタンチェック印（未選択）*/
+input[type="radio"]+span:after {
+  content: "";
+  display: none;
+}
+/*ラジオボタンチェック印（選択）*/
+input[type="radio"]:checked+span:after {
+  display: block;
+  position: absolute;
+  top: 0.45em;
+  left: 0.2em;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: #99908c;
+  line-height: 1;
+  transform: scale(1);
+}
+
+/*----------------------------------------
+    Form Layout
+----------------------------------------*/
+.radioList{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 60%;
+  margin: 3% auto;
+  white-space: nowrap;
+}
+.contact_flex{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8% 8%;
+}
+.contact_name{
+  /* width: 100%; */
+}
+.contact_mail{
+  /* width: 100%; */
+  margin-top: 10px;
+}
+.contact_comment{
+  width: 60%;
+}
+.contact_flex section{
+  width: 40%;
+  margin-right: 10px;
+}
+.submit input{
+  display: block;
+}
+.submit{
+  margin: auto 0 0 10px;
+}
+/*エラーメッセージ*/
+.errorText {
+  display: none;
+  align-items: center;
+  margin-top: 16px;
+  color: #99908c;
+  font-weight: bold;
+}
+.inputField.is-error .errorText {
+  display: block;
+}
+.errorText::before {
+  content: "";
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 0.2em;
+  background: url(../img/icon_attention.svg) center center / contain no-repeat;
+  vertical-align: middle;
+}
+
+/* ハンバーガーメニュー */
+.parent2 {
+  bottom:115px;
+  left:80px;
+  position:fixed;
+  display:block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  z-index:20;
+}
+.parent2 a{
+  text-decoration: none;
+  color: #99908c;
+}
+.test1 {
+  width:60%;
+  height:60%;
+  position:absolute;
+  top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  opacity: 0;
+}
+.test2 {
+  width:60%;
+  height:60%;
+  position:absolute;
+  top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+  opacity: 0;
+}
+.test3 {
+  width:60%;
+  height:60%;
+  position:absolute;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s; 
+  opacity: 0;
+}
+.test4 {
+  width:60%;
+  height:60%;
+  position:absolute;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+  opacity: 0;
+}
+.mask2 {
+  bottom:35px;
+  left:50px;
+  width:120px;
+  height:120px;
+  position:absolute;
+  z-index:21;
+  cursor:pointer;
+  position:fixed;
+}
+.mask2 span{
+  bottom:84px;
+  left:70px;
+  width:40px;
+  height:2px;
+  position:absolute;
+  z-index:21;
+  background-color:#51abb4;
+  cursor:pointer;
+  position:fixed;
+}
+.mask2 span::before,.mask2 span::after {
+  content: "";
+  height:2px;
+  position:absolute;
+  z-index:21;
+  cursor:pointer;
+  position:fixed;
+}
+.mask2 span::before{
+  background-color:#b28fc3;
+  bottom:100px;
+  left:70px;
+  width:50px;
+}
+.mask2 span::after {
+  bottom:-18px;
+  left: 0;
+  width:30px;
+  position:absolute;
+  background-color:#51abb4;
+}
+.open span{
+  background: transparent;
+}
+.open span::before{
+  width: 30px;
+  bottom: 85px;
+  left: 75px;
+  transform: rotate(45deg);
+}
+.open span::after{
+  bottom: 0;
+  left: 5px;
+  transform: rotate(135deg);
+}
+/**/
+@media screen and (max-width: 1100px){
+ 
+ }
+
+ @media screen and (max-width: 834px){
+.circle{
+width: 15%;
+height: 15%;
+bottom: 18px;
+}
+.contact_wrap{
+  height: 55vh;
+}
+.contact_p{
+  margin: 70px 0 0 45%;
+  font-size: 16px;
+  text-align: start;
+}
+.square h1{
+  margin: 70px 0 0 45%;
+}
+.container {
+  margin: 18vw 5vw;
+}
+.contact_flex{
+  display:block;
+  width: 100%;
+  padding: 0 8% 8%;
+ }
+ .contact_comment{
+  width: 100%;
+}
+.contact_flex section{
+  width: 100%;
+  margin-right: 10px;
+}
+.radioList{
+  margin: 5% auto;
+  width: 75%;
+}
+.contact_flex p{
+  margin-top: 5%;
+}
+.submit input{
+  margin: 0 auto;
+}
+.sp{
+  display: none;
+}
+ }
+ @media screen and (max-width: 767px){
+.square{
+  display: none;
+}
+.sp_home{
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  font-size: 24px;
+  background: linear-gradient(90deg, #fae6db, #f5f1eb 30%, #e1dfde);
+  background: -webkit-linear-gradient(0deg, #fae6db, #f5f1eb 30%, #e1dfde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sp_home ul li a{
+  text-decoration: none;
+}
+.sp_container{
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top:10px;
+  left: 10px;
+}
+.sp_container h1{
+  white-space: nowrap;
+  padding: 5px;
+  font-size: 36px;
+  color: #a0a0b0;
+}
+.sp_contact_p{
+  font-size: 14px;
+  padding: 10px;
+  color: #a0a0b0;
+}
+.sp2{
+  display: none;
+}
+main {
+  width: 90%;
+  margin: 0;
+}
+.parent2{
+  bottom: 20px;
+  left: 20px;
+}
+.mask2 span {
+  bottom: 65px;
+  left: 50px;
+}
+.mask2 span::before {
+  bottom: 82px;
+  left: 50px;
+}
+.open span::before {
+  bottom: 65px;
+  left: 55px;
+}
+.circle{
+  left: 60px;
+  width: 13%;
+  height: 25%;
+  bottom: 0;
+  color: #99908c;
+}
+.pc_inputField{
+  display: none;
+}
+.sp_input{
+  display: block;
+}
+.contact_wrap{
+  width: 80vw;
+  padding: 5% 2%;
+  height: 66vh;
+}
+#form{
+  width: 90%;
+  margin: 0 auto;
+}
+.menu_content{
+  bottom: 20px;
+  left: 20px;
+}
+.menu-btn {
+  bottom: 40px;
+  left: 40px
+}
+}
